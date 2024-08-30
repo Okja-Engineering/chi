@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Node Package",
+    "extends": "./base.json",
+    "compilerOptions": {
+        "moduleResolution": "node"
+    },
+    "include": ["."],
+    "exclude": ["dist", "build", "node_modules"]
+}
