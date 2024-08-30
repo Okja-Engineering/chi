@@ -34,7 +34,7 @@ export const restrictEnvAccess = tseslint.config(
         },
       ],
     },
-  }
+  },
 );
 
 export default tseslint.config(
@@ -80,5 +80,5 @@ export default tseslint.config(
   {
     linterOptions: { reportUnusedDisableDirectives: true },
     languageOptions: { parserOptions: { projectService: true } },
-  }
+  },
 );
