@@ -1,0 +1,19 @@
+name: Build
+on:
+    workflow_call: null
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout chidori@${{ github.ref }}
+              uses: actions/checkout@v4
+              with:
+                repository: ${{ github.repository }}
+                ref: ${{ github.ref }}
+                fetch-depth: 2
+            
+            - name: Install Dependencies
+              uses: ./tooling/github/setup
+            
+            - name: Build Packages
+              run: pnpm build

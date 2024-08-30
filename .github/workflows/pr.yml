@@ -1,0 +1,48 @@
+name: PR Update
+
+on:
+  pull_request:
+    branches: ["*"]
+  push:
+    branches: ["main"]
+  merge_group:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+    changes:
+        name: Detect changes
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout chidori@${{ github.ref }}
+              uses: actions/checkout@v4
+              with:
+                repository: ${{ github.repository }}
+                ref: ${{ github.ref }}
+                fetch-depth: 2
+    type-check:
+        name: Type check
+        needs: [changes]
+        if: ${{ needs.changes.outputs.has-files-requiring-all-checks == 'true' }}
+        uses: ./.github/workflows/check-types.yml
+        secrets: inherit
+
+    lint:
+        name: Linters
+        needs: [changes]
+        if: ${{ needs.changes.outputs.has-files-requiring-all-checks == 'true' }}
+        uses: ./.github/workflows/lint.yml
+        secrets: inherit
+    
+    required:
+        needs: [changes, lint, type-check]
+        if: always()
+        runs-on: ubuntu-latest
+        steps:
+          - name: fail if conditional jobs failed
+            if: needs.changes.outputs.has-files-requiring-all-checks == 'true' && (contains(needs.*.result, 'failure') || contains(needs.*.result, 'skipped') || contains(needs.*.result, 'cancelled'))
+            run: exit 1
+        
