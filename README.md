@@ -1,1 +1,1 @@
-# chidori
+# Chidori Design System
