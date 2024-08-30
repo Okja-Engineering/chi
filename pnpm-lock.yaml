@@ -39,6 +39,111 @@ importers:
         specifier: 'catalog:'
         version: 5.5.4
 
+  packages/colors:
+    devDependencies:
+      '@chidori/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@chidori/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@chidori/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.9.1(jiti@1.21.6)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
+
+  packages/components:
+    devDependencies:
+      '@chidori/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@chidori/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@chidori/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.9.1(jiti@1.21.6)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
+
+  packages/icons:
+    devDependencies:
+      '@chidori/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@chidori/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@chidori/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.9.1(jiti@1.21.6)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
+
+  packages/primitives:
+    devDependencies:
+      '@chidori/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@chidori/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@chidori/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.9.1(jiti@1.21.6)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
+
+  packages/themes:
+    devDependencies:
+      '@chidori/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@chidori/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@chidori/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.9.1(jiti@1.21.6)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
+
   tooling/eslint:
     dependencies:
       '@eslint/compat':
