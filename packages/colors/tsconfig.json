@@ -1,6 +1,14 @@
 {
   "extends": "@chidori/tsconfig/internal-package.json",
-  "compilerOptions": {},
-  "include": ["*.ts", "src"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "declarationDir": "types",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "declaration": true,
+    "isolatedModules": true
+  },
+  "include": [".", "scripts", "src"],
   "exclude": ["node_modules"]
 }
