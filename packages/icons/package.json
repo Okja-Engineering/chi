@@ -2,26 +2,36 @@
   "name": "@chidori/icons",
   "private": true,
   "version": "0.1.0",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
-    "dev": "tsc",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
-    "lint": "eslint",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    "build": "pnpm clean && pnpm install && pnpm svgr && tsup",
+    "presvgr": "figma-cli download-icons -f D37AVxVmOMBb9XeFEtC4t8 -o ./assets",
+    "svgr": "svgr --icon --title-prop --replace-attr-values '#1D1D1D=currentColor' -d src -- assets"
   },
   "devDependencies": {
     "@chidori/eslint-config": "workspace:*",
+    "@chidori/figma-cli": "workspace:*",
     "@chidori/prettier-config": "workspace:*",
     "@chidori/tsconfig": "workspace:*",
+    "@svgr/cli": "^8.1.0",
+    "@swc/core": "^1.7.24",
+    "@types/react": "^18.3.5",
+    "@types/svgo": "^3.0.0",
     "eslint": "catalog:",
+    "figma-js": "1.16.1-0",
     "prettier": "catalog:",
+    "react": "^18.3.1",
+    "svgo": "^3.3.2",
+    "tsup": "^8.2.4",
     "typescript": "catalog:"
   },
-  "prettier": "@chidori/prettier-config"
+  "prettier": "@chidori/prettier-config",
+  "dependencies": {
+    "dotenv-cli": "^7.4.2",
+    "tsx": "^4.19.0"
+  }
 }

@@ -1,6 +1,12 @@
 {
-  "extends": "@chidori/tsconfig/internal-package.json",
-  "compilerOptions": {},
-  "include": ["*.ts", "src"],
+  "extends": "@chidori/tsconfig/react-package.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declarationDir": "types",
+    "declaration": true,
+    "isolatedModules": true,
+    "allowJs": true,
+  },
+  "include": [".", "src"],
   "exclude": ["node_modules"]
 }

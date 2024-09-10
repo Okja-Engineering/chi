@@ -23,5 +23,6 @@
     "//#clean": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": ["FIGMA_ACCESS_TOKEN"]
 }
