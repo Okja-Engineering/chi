@@ -1,5 +1,5 @@
 {
-  "name": "@chidori/eslint-config",
+  "name": "@okja/eslint-config",
   "private": true,
   "version": "0.3.0",
   "type": "module",
@@ -24,11 +24,11 @@
     "typescript-eslint": "^8.3.0"
   },
   "devDependencies": {
-    "@chidori/prettier-config": "workspace:*",
-    "@chidori/tsconfig": "workspace:*",
+    "@okja/prettier-config": "workspace:*",
+    "@okja/tsconfig": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },
-  "prettier": "@chidori/prettier-config"
+  "prettier": "@okja/prettier-config"
 }

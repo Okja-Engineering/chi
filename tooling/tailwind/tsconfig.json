@@ -1,5 +1,5 @@
 {
-  "extends": "@chidori/tsconfig/base.json",
+  "extends": "@okja/tsconfig/base.json",
   "include": ["."],
   "exclude": ["node_modules"]
 }

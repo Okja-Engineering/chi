@@ -1,5 +1,5 @@
 {
-  "extends": "@chidori/tsconfig/react-package.json",
+  "extends": "@okja/tsconfig/react-package.json",
   "compilerOptions": {
     "outDir": "dist",
     "declarationDir": "types",

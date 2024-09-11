@@ -1,11 +1,12 @@
 {
-  "name": "@chidori/icons",
-  "private": true,
-  "version": "0.1.0",
+  "name": "@okja/chi-icons",
+  "version": "0.1.1",
+  "description": "The home for Chi's supported icons.",
+  "author": "Okja, LLC",
+  "license": "Apache-2.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "license": "MIT",
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "build": "pnpm clean && pnpm install && pnpm svgr && tsup",
@@ -13,10 +14,10 @@
     "svgr": "svgr --icon --title-prop --replace-attr-values '#1D1D1D=currentColor' -d src -- assets"
   },
   "devDependencies": {
-    "@chidori/eslint-config": "workspace:*",
-    "@chidori/figma-cli": "workspace:*",
-    "@chidori/prettier-config": "workspace:*",
-    "@chidori/tsconfig": "workspace:*",
+    "@okja/eslint-config": "workspace:*",
+    "@okja/figma-cli": "workspace:*",
+    "@okja/prettier-config": "workspace:*",
+    "@okja/tsconfig": "workspace:*",
     "@svgr/cli": "^8.1.0",
     "@swc/core": "^1.7.24",
     "@types/react": "^18.3.5",
@@ -29,7 +30,7 @@
     "tsup": "^8.2.4",
     "typescript": "catalog:"
   },
-  "prettier": "@chidori/prettier-config",
+  "prettier": "@okja/prettier-config",
   "dependencies": {
     "dotenv-cli": "^7.4.2",
     "tsx": "^4.19.0"

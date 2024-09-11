@@ -1,7 +1,7 @@
 {
-  "name": "@chidori/figma-cli",
+  "name": "@okja/figma-cli",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "bin": "./dist/index.js",
   "license": "MIT",
@@ -13,17 +13,16 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {
-    "@chidori/eslint-config": "workspace:*",
-    "@chidori/prettier-config": "workspace:*",
-    "@chidori/tsconfig": "workspace:*",
-    "@types/dotenv": "^8.2.0",
+    "@okja/eslint-config": "workspace:*",
+    "@okja/prettier-config": "workspace:*",
+    "@okja/tsconfig": "workspace:*",
     "@types/prompts": "^2.4.9",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "tsup": "^8.2.4",
     "typescript": "catalog:"
   },
-  "prettier": "@chidori/prettier-config",
+  "prettier": "@okja/prettier-config",
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.1.0",

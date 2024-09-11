@@ -10,7 +10,7 @@ process.on("SIGNTERM", () => process.exit(0));
 
 function main() {
   new Command()
-    .name("@chidori/figma-cli")
+    .name("@okja/figma-cli")
     .description("A CLI tool for interacting with Figma API")
     .version("0.0.1-development", "-v, --version", "display the version")
     .addCommand(downloadIconsCommand)

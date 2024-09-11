@@ -1,4 +1,4 @@
-# Chidori Design System
+# Okja
 
 ## Documentation
 

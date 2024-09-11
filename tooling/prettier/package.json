@@ -1,5 +1,5 @@
 {
-  "name": "@chidori/prettier-config",
+  "name": "@okja/prettier-config",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -17,8 +17,8 @@
     "prettier-plugin-tailwindcss": "^0.6.6"
   },
   "devDependencies": {
-    "@chidori/tsconfig": "workspace:*",
+    "@okja/tsconfig": "workspace:*",
     "typescript": "catalog:"
   },
-  "prettier": "@chidori/prettier-config"
+  "prettier": "@okja/prettier-config"
 }

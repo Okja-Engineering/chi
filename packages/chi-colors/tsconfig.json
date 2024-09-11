@@ -1,5 +1,5 @@
 {
-  "extends": "@chidori/tsconfig/internal-package.json",
+  "extends": "@okja/tsconfig/internal-package.json",
   "compilerOptions": {
     "outDir": "dist",
     "declarationDir": "types",

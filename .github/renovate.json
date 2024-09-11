@@ -3,7 +3,7 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@chidori/"],
+      "matchPackagePatterns": ["^@okja/"],
       "enabled": false
     }
   ],

@@ -1,0 +1,31 @@
+{
+  "name": "@okja/chi-colors",
+  "version": "0.1.1",
+  "description": "Accessible colors for Chi, Okja's design system",
+  "author": "Okja, LLC",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "build": "pnpm clean && pnpm install && tsup && pnpm build-css-modules",
+    "build-css-modules": "tsx ./scripts/build-css-modules.ts",
+    "release": "changeset version",
+    "pub:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta",
+    "pub:next": "pnpm build && pnpm publish --no-git-checks --access public --tag next",
+    "pub:release": "pnpm build && pnpm publish --access public"
+  },
+  "devDependencies": {
+    "@okja/eslint-config": "workspace:*",
+    "@okja/prettier-config": "workspace:*",
+    "@okja/tsconfig": "workspace:*",
+    "eslint": "catalog:",
+    "handlebars": "^4.7.8",
+    "prettier": "catalog:",
+    "tsup": "^8.2.4",
+    "tsx": "^4.19.0",
+    "typescript": "catalog:"
+  },
+  "prettier": "@okja/prettier-config"
+}

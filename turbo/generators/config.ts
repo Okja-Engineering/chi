@@ -10,13 +10,13 @@ interface PackageJson {
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator("init", {
-    description: "Generate a new package for the Chidori Design System",
+    description: "Generate a new package for the Okja Design System",
     prompts: [
       {
         type: "input",
         name: "name",
         message:
-          "What is the name of the package? (You can skip the `@chidori/` prefix)",
+          "What is the name of the package? (You can skip the `@okja/` prefix)",
       },
       {
         type: "input",
@@ -28,8 +28,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     actions: [
       (answers) => {
         if ("name" in answers && typeof answers.name === "string") {
-          if (answers.name.startsWith("@chidori/")) {
-            answers.name = answers.name.replace("@chidori/", "");
+          if (answers.name.startsWith("@okja/")) {
+            answers.name = answers.name.replace("@okja/", "");
           }
         }
         return "Config sanitized";

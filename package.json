@@ -1,5 +1,7 @@
 {
-  "name": "chidori-design-system",
+  "name": "chi",
+  "author": "Okja, LLC",
+  "license": "Apache-2.0",
   "private": true,
   "engines": {
     "node": ">=20.16.0"
@@ -15,14 +17,18 @@
     "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish"
   },
   "devDependencies": {
-    "@chidori/prettier-config": "workspace:*",
+    "@changesets/cli": "^2.27.8",
+    "@okja/prettier-config": "workspace:*",
     "@turbo/gen": "^2.0.13",
     "prettier": "catalog:",
     "turbo": "^2.0.13",
     "typescript": "catalog:"
   },
-  "prettier": "@chidori/prettier-config"
+  "prettier": "@okja/prettier-config"
 }

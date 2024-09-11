@@ -1,5 +1,5 @@
 {
-  "extends": "@chidori/tsconfig/node-package.json",
+  "extends": "@okja/tsconfig/node-package.json",
   "compilerOptions": {
     "isolatedModules": false
   },
