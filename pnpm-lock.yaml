@@ -127,6 +127,27 @@ importers:
         specifier: 'catalog:'
         version: 5.6.2
 
+  packages/primitives:
+    devDependencies:
+      '@okja/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@okja/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@okja/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.10.0(jiti@1.21.6)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.6.2
+
   tooling/eslint:
     dependencies:
       '@eslint/compat':

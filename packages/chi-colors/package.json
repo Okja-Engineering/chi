@@ -1,5 +1,6 @@
 {
   "name": "@okja/chi-colors",
+  "private": false,
   "version": "0.1.1",
   "description": "Accessible colors for Chi, Okja's design system",
   "author": "Okja, LLC",

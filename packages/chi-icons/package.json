@@ -1,5 +1,6 @@
 {
   "name": "@okja/chi-icons",
+  "private": false,
   "version": "0.1.1",
   "description": "The home for Chi's supported icons.",
   "author": "Okja, LLC",
